@@ -1,0 +1,283 @@
+//header
+
+.header {
+     nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+     }
+}
+
+div.custom-menu-class ul {
+     display: flex;
+     align-items: center;
+     padding: 0 35px 0 35px;
+}
+
+div.custom-menu-class li {
+     padding: 0;
+     margin: 0;
+     list-style-type: none;
+}
+
+div.custom-menu-class-social ul {
+     display: flex;
+     align-items: center;
+     padding: 0 47px 0 47px;
+}
+
+div.custom-menu-class-social li {
+     padding: 0;
+     margin: 0 15px;
+     list-style-type: none;
+}
+
+.custom-logo-link {
+     margin: 5px auto;
+}
+
+//promo section
+
+.main-heading {
+     display: inline-block;
+     text-align: center;
+     width: 100%;
+}
+
+.main-header {
+     margin: 80px auto 0;
+     padding: 0;
+}
+
+.sub-header {
+     margin: 0 0 30px 0;
+}
+
+.promo-slider {
+     overflow-x: hidden;
+}
+
+//introducing
+
+.buttons {
+     padding: 10px;
+     text-align: right;
+}
+
+.group {
+     margin: 0;
+     padding: 0 0 30px 0;
+     display: flex;
+     justify-content: center;
+     .music-person {
+          padding: 0;
+          margin: 0 5px;
+          position: relative;
+          list-style-type: none;
+          overflow: hidden;
+     }
+}
+
+.musician-info-active {
+     width: 315px;
+     position: absolute;
+     bottom: -40px;
+     padding: 10px 0 15px 0;
+}
+
+.player-social-list {
+     display: flex;
+     padding: 20px 0 0 0;
+     .player-social-item {
+          padding: 0;
+          margin: 0 15px;
+          list-style-type: none;
+     }
+}
+
+.musician-head, .musician-subhead {
+     margin: 0;
+     padding: 0 0 0 10px;
+}
+
+//section-container
+
+.section-container {
+     display: flex;
+     padding: 0;
+     justify-content: space-between;
+}
+
+.pull-left-item {
+     padding: 0;
+     margin: 0;
+     width: 70%;
+     list-style-type: none;
+}
+
+.pull-right-item {
+     padding: 0;
+     margin: 0;
+     width: 30%;
+     list-style-type: none;
+}
+
+//upcoming-videos
+
+.concert-img {
+     margin: 0;
+     position: relative;
+}
+
+.concert-date {
+     position: absolute;
+     top: 80px;
+     width: 100%;
+     text-align: center;
+}
+
+.date-number, .date-month {
+     margin: 0;
+}
+
+.flexslider3 {
+     margin-bottom: 40px;
+}
+
+.concert-info {
+     margin: 0;
+}
+
+.concert-name {
+     margin: 0 20px;
+}
+
+.upcoming-concert {
+     display: flex;
+}
+
+.table-concert {
+     margin: 10px 20px;
+}
+
+.button-container {
+     margin: 20px 20px;
+}
+
+//founders
+
+.founders-content {
+     display: flex;
+     justify-content: space-between;
+}
+
+.founders-heading {
+     margin: 70px 0 0 45px;
+}
+
+.founders-head, .founder-subhead {
+     margin: 0;
+}
+
+.learn-more-container {
+     margin-top: 30px;
+}
+
+//song-instagram
+
+.iframe-player {
+     width: 100%;
+}
+
+.songs-item {
+     padding: 0;
+     margin: 0;
+     list-style-type: none;
+}
+
+.song-list {
+     display: flex;
+     margin-top: 30px;
+     padding: 0;
+}
+
+.song {
+     margin: 5px;
+     border-bottom: 2px solid #999999;
+}
+
+.insta-list {
+     display: flex;
+     flex-wrap: wrap;
+     padding: 0;
+     margin: 0;
+}
+
+.insta-item {
+     padding: 0;
+     margin: 10px;
+     list-style-type: none;
+}
+
+.insta-photo {
+     max-width: 120px;
+     height: auto;
+}
+
+//download
+
+.download {
+     margin-top: 30px;
+}
+
+.download-content {
+     padding: 30px;
+}
+
+.download-header, .download-subhead {
+     text-align: center;
+     margin: 10px auto;
+}
+
+ul.app-list {
+     display: flex;
+     justify-content: center;
+     padding: 0;
+     margin: 0 auto;
+}
+
+.app-item {
+     padding: 0;
+     margin: 20px;
+     list-style-type: none;
+}
+
+//footer
+
+.footer {
+     text-align: center;
+}
+
+.custom-menu-class-footer {
+     display: inline-block;
+     padding-top: 30px;
+     text-align: center;
+}
+
+#menu-footer-navigation {
+     display: flex;
+     align-items: center;
+     padding: 0;
+     margin: auto 0;
+     li {
+          padding: 0;
+          margin: 0 20px;
+          list-style-type: none;
+     }
+}
+
+.copyright {
+     text-align: center;
+     margin-bottom: 30px;
+}
+

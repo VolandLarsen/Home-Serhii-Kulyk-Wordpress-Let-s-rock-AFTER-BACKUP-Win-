@@ -1,0 +1,28 @@
+.footer {
+     border-top: 2px solid #d2d2d2;
+}
+
+#menu-footer-navigation a {
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: bold;
+     color: $main-font-color;
+}
+
+#menu-footer-navigation a:hover {
+     text-decoration: line-through;
+}
+
+.copyright {
+     color: $main-font-color;
+}
+
+a.cantus {
+     text-decoration: none;
+     font-size: 30px;
+     color: $main-color;
+}
+
+.cantus:hover {
+     opacity: 0.5;
+}

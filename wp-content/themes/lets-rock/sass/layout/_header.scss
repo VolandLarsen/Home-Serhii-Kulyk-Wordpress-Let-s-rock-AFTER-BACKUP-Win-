@@ -1,0 +1,122 @@
+.header {
+     background-color: $main-color;
+}
+
+.head-slider{
+     position: relative;
+}
+
+.promo {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+}
+
+
+
+div.custom-menu-class ul {
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: bold;
+     color: $secondary-font-color;
+}
+
+div.custom-menu-class {
+     li {
+          display: inline-block;
+          a {
+               position: relative;
+               display: block;
+               padding: 0 10px;
+               font-weight: 700;
+               font-size: 16px;
+               color: $secondary-font-color;
+               text-transform: uppercase;
+               text-decoration: none;
+               outline: none;
+               &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    height: 1px;
+                    width: 0;
+                    background: transparent;
+               }
+               &:hover:before {
+                    background: $secondary-font-color;
+                    width: 100%;
+               }
+          }
+     }
+}
+
+div.custom-menu-class-social a:first-child {
+     text-decoration: none;
+     font-family: $main-color;
+     font-size: 16px;
+     font-weight: bold;
+     color: $secondary-font-color;
+}
+
+div.custom-menu-class-social li:hover {
+     text-decoration: line-through;
+     color: $secondary-font-color;
+}
+
+.menu li a:before {
+     font-family: FontAwesome;
+     padding-right: 7px;
+}
+
+#menu-social li:first-child{
+     a:before {
+          content: "\f09a";
+     }
+}
+
+#menu-social li:nth-child(2){
+     a:before {
+          content: "\f099";
+     }
+}
+
+#menu-social li:nth-child(3){
+     a:before {
+          content: "\f0d5";
+     }
+}
+
+// slides
+
+.main-header {
+     font-size: 80px;
+     font-weight: bold;
+     color: $main-color;
+     width: 400px;
+     line-height: 1;
+}
+
+.sub-header {
+     color: $main-font-color;
+     font-size: 60px;
+     display: inline-block;
+}
+
+.promo {
+     border-bottom: 3px solid #d3d3d3;
+}
+
+.promo:after {
+     content: '';
+     background-color: $main-color;
+     height: 3px;
+     width: 70%;
+     display: block;
+     position: absolute;
+}
+
+.main-heading {
+     border-bottom: 3px;
+}
