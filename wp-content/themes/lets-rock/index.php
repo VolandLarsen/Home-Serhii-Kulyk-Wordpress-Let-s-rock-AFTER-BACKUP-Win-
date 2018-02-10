@@ -15,7 +15,28 @@
 get_header(); ?>
 <?php get_theme_mod('drop-page') ?>
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main"
+		<main id="main" class="site-main">
+
+            <section class="introducing">
+                <div class="container">
+                    <div class="heading">
+                        <h2 class="head"><?php echo get_theme_mod('introducing_header') ?> <span class="subhead"><?php echo get_theme_mod('introducing_span_header') ?></span></h2>
+                    </div>
+                    <div class="buttons custom-navigation">
+                        <a class="button flex-prev" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                        <a class="button flex-next" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="flexslider2">
+                        <ul class="slides">
+                            <li>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
             <div class="founders">
                 <div class="container">
                     <div class="founders-content">

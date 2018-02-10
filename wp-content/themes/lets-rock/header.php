@@ -43,26 +43,38 @@
             </div>
         </header><!-- #masthead -->
         <div class="head-slider">
-            <!-- This section is dont show in right way if it placed in header.
-            I try to fix it many times but it dont work. But if it placed outside header,
-            looks as it should look,-->
-            <!-- Here is a slider for this section. It will not work on other wordpress site
-             without installing plugin "MetaSlider". I don`t know how to instll wp-plugin in theme.-->
-            <?php echo do_shortcode('[metaslider id="9"]'); ?>
-            <div class="promo">
-                <div class="main-heading">
-                    <?php echo do_shortcode('[metaslider id="136"]'); ?>
-                    <h1 class="main-header">
-                        <?php echo get_theme_mod('slide1_header') ?>
-                        <span class="sub-header">
+            <?php
+            $args = [
+                'post_type' => 'images',
+            ];
+            query_posts($args);
+
+            ?>
+            <div class="flexslider"> <!-- This element will have relative position -->
+                <ul class="slides">
+                    <li>
+                        <?php
+                        while (have_posts()) : the_post();
+
+                            get_template_part('template-parts/content', 'images');
+
+                        endwhile;
+                        ?>
+                    </li>
+                </ul>
+                <div class="promo"> <!-- This element will have absolute position -->
+                    <div class="main-heading">
+                        <h1 class="main-header">
+                            <?php echo get_theme_mod('slide1_header') ?>
+                            <span class="sub-header">
                             <?php echo get_theme_mod('slide1_subheader') ?>
                         </span>
-                    </h1>
-                    <a class="main-button" href="<?php echo get_theme_mod('slide1_button_url') ?>">
-                        <?php echo get_theme_mod('slide1_button_content') ?>
-                    </a>
+                        </h1>
+                        <a class="main-button" href="<?php echo get_theme_mod('slide1_button_url') ?>">
+                            <?php echo get_theme_mod('slide1_button_content') ?>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-
         <div id="content" class="site-content">

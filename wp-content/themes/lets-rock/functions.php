@@ -136,11 +136,15 @@ function lets_rock_scripts()
 
     // my scripts
 
+    wp_enqueue_style('flexslider-css', get_template_directory_uri() . '/flexslider/flexslider.css');
+
     wp_enqueue_style('main-css', get_template_directory_uri() . '/css/main.css');
 
     wp_enqueue_script("jquery");
 
     wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js');
+
+    wp_enqueue_script('flexslider-js', get_template_directory_uri() . '/flexslider/jquery.flexslider-min.js');
 
     wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css');
 
@@ -505,6 +509,34 @@ function letsrock_customize_register($wp_customize)
         'section' => 'popup_section',
         'settings' => 'popup_info',
         'type' => 'textarea',
+    ));
+
+    $wp_customize->add_section('introducing_section', array(
+        'title' => __('Introducing editor', 'lets_rock'),
+    ));
+
+    $wp_customize->add_setting('introducing_header', array(
+        'default' => __('', 'lets_rock'),
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'introducing_header', array(
+        'label' => __('Edit introducing header', 'lets_rock'),
+        'section' => 'introducing_section',
+        'settings' => 'introducing_header',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('introducing_span_header', array(
+        'default' => __('', 'lets_rock'),
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'introducing_span_header', array(
+        'label' => __('Edit introducing subheader', 'lets_rock'),
+        'section' => 'introducing_section',
+        'settings' => 'introducing_span_header',
+        'type' => 'text',
     ));
 }
 

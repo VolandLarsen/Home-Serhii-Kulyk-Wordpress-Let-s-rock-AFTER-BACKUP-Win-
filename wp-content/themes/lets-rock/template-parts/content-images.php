@@ -10,11 +10,5 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <section>
-        <h3>THIS IS OUR LATEST VIDEOS</h3>
-            <div><?php echo the_field('video') ?></div>
-        <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
-    </section>
+    <img src="<?php the_field('slider_images'); ?>" class="musician">
 </article><!-- #post-<?php the_ID(); ?> -->
-
-

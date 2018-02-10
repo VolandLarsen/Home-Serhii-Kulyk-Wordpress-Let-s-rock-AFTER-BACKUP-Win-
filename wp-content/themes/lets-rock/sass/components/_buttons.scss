@@ -63,18 +63,20 @@ a.learn-more-button:hover {
      opacity: 0.8;
 }
 
-.button {
+a.button {
      background-color: $main-color;
      color: $secondary-font-color;
      display: inline-block;
      padding: 5px 10px;
-     .fa {
-          margin: 0 auto;
-          padding: 0;
-     }
-     &:hover {
-          opacity: 0.8;
-     }
+}
+
+.button:hover {
+     opacity: 0.8;
+}
+
+.button .fa {
+     margin: 0 auto;
+     padding: 0;
 }
 
 .main-button-purshcase {

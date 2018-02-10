@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <section>
-        <h3 style="text-align: center">THIS IS OUR UPCOMING CONCERTS</h3>
+        <h3 style="text-align: center">THIS IS OUR UPCOMING CONCERT</h3>
         <div class="container">
             <p> <a href="<?php the_permalink() ?>"><?php the_title() ?></a></p>
             <div class="upcoming-concert">

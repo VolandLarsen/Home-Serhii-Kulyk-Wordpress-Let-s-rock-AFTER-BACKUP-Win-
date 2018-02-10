@@ -13,9 +13,13 @@ get_header(); ?>
         <main id="main" class="site-main">
 
             <?php
+            $args = [
+                'post_type' => 'concerts',
+            ];
+
             while (have_posts()) : the_post();
 
-                get_template_part('template-parts/content', get_post_type());
+                get_template_part('template-parts/content', 'concerts-single');
 
                 the_post_navigation();
 
