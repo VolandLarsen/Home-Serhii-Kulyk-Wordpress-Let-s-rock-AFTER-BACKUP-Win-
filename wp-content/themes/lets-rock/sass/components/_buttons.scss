@@ -14,6 +14,8 @@ a.main-button {
 }
 
 a.main-button:hover {
+     text-decoration: none;
+     color: $secondary-font-color;
      transition: 0.5s;
      cursor: pointer;
      opacity: 0.8;
