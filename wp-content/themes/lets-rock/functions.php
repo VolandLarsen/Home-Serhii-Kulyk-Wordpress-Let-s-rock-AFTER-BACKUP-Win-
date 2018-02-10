@@ -566,6 +566,34 @@ function letsrock_customize_register($wp_customize)
         'settings' => 'upcoming_span_header',
         'type' => 'text',
     ));
+
+    $wp_customize->add_section('videos_section', array(
+        'title' => __('Latest videos editor', 'lets_rock'),
+    ));
+
+    $wp_customize->add_setting('videos_header', array(
+        'default' => __('', 'lets_rock'),
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'videos_header', array(
+        'label' => __('Edit videos header', 'lets_rock'),
+        'section' => 'videos_section',
+        'settings' => 'videos_header',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('videos_span_header', array(
+        'default' => __('', 'lets_rock'),
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'videos_span_header', array(
+        'label' => __('Edit videos concert subheader', 'lets_rock'),
+        'section' => 'videos_section',
+        'settings' => 'videos_span_header',
+        'type' => 'text',
+    ));
 }
 
 add_action('customize_register', 'letsrock_customize_register');

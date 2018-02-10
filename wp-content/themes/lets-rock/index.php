@@ -92,19 +92,17 @@ get_header(); ?>
                             </h2>
                         </div>
                         <div>
-                            <div class="<?php echo $data ['sectionHeader'] ['class'] ?>">
-                                <h2 class="<?php echo $data ['sectionHeader'] ['headerClass'] ?>">
-                                    <?php echo $data ['headers'] ['headerVideo'] ?>
-                                    <span class="<?php echo $data ['sectionHeader'] ['spanClass'] ?>">
-                <?php echo $data ['headers'] ['spanVideo'] ?>
-                </span>
+                            <div class="heading">
+                                <h2 class="head">
+                                    <?php echo get_theme_mod('videos_header') ?>
+                                    <span class="subhead">
+                                <?php echo get_theme_mod('videos_span_header') ?>
+                            </span>
                                 </h2>
                             </div>
                             <div class="buttons custom-navigation-two">
-                                <a class="<?php echo $data ['introControls'] ['controlLeft'] ?>" href="#"><i
-                                            class="<?php echo $data ['introControls'] ['fontArrowLeft'] ?>" aria-hidden="true"></i></a>
-                                <a class="<?php echo $data ['introControls'] ['controlRight'] ?>" href="#"><i
-                                            class="<?php echo $data ['introControls'] ['fontArrowRight'] ?>" aria-hidden="true"></i></a>
+                                <a class="button flex-prev" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                <a class="button flex-next" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
