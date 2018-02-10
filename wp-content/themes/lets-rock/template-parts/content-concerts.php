@@ -12,7 +12,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <section>
         <h3 style="text-align: center">THIS IS OUR UPCOMING CONCERTS</h3>
-        <div class="container">
             <p> <a href="<?php the_permalink() ?>"><?php the_title() ?></a></p>
             <div class="upcoming-concert">
                 <div class="concert-img">
@@ -48,7 +47,6 @@
                            class="main-button-purshcase"><?php the_field('button') ?></a>
                     </div>
                 </div>
-            </div>
         </div>
     </section>
 </article><!-- #post-<?php the_ID(); ?> -->

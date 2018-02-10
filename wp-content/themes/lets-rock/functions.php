@@ -538,6 +538,34 @@ function letsrock_customize_register($wp_customize)
         'settings' => 'introducing_span_header',
         'type' => 'text',
     ));
+
+    $wp_customize->add_section('upcoming_section', array(
+        'title' => __('Upcoming concerts editor', 'lets_rock'),
+    ));
+
+    $wp_customize->add_setting('upcoming_header', array(
+        'default' => __('', 'lets_rock'),
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'upcoming_header', array(
+        'label' => __('Edit introducing header', 'lets_rock'),
+        'section' => 'upcoming_section',
+        'settings' => 'upcoming_header',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('upcoming_span_header', array(
+        'default' => __('', 'lets_rock'),
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'upcoming_span_header', array(
+        'label' => __('Edit upcoming concert subheader', 'lets_rock'),
+        'section' => 'upcoming_section',
+        'settings' => 'upcoming_span_header',
+        'type' => 'text',
+    ));
 }
 
 add_action('customize_register', 'letsrock_customize_register');

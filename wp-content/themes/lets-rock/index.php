@@ -20,7 +20,12 @@ get_header(); ?>
             <section class="introducing">
                 <div class="container">
                     <div class="heading">
-                        <h2 class="head"><?php echo get_theme_mod('introducing_header') ?> <span class="subhead"><?php echo get_theme_mod('introducing_span_header') ?></span></h2>
+                        <h2 class="head">
+                            <?php echo get_theme_mod('introducing_header') ?>
+                            <span class="subhead">
+                                <?php echo get_theme_mod('introducing_span_header') ?>
+                            </span>
+                        </h2>
                     </div>
                     <div class="buttons custom-navigation">
                         <a class="button flex-prev" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
@@ -29,10 +34,111 @@ get_header(); ?>
                     <div class="flexslider2">
                         <ul class="slides">
                             <li>
+                                <?php
+                                $args = [
+                                    'post_type' => 'member',
+                                    'posts_per_page' => 3,
+                                ];
 
+                                query_posts($args);
+
+                                while ( have_posts() ) : the_post();
+
+                                    get_template_part( 'template-parts/content', 'member' );
+
+                                    // If comments are open or we have at least one comment, load up the comment template.
+                                    if ( comments_open() || get_comments_number() ) :
+                                        comments_template();
+                                    endif;
+
+                                endwhile; // End of the loop.
+                                ?>
+                            </li>
+                            <li>
+                                <?php
+                                $args = [
+                                    'post_type' => 'member',
+                                    'posts_per_page' => 3,
+                                ];
+
+                                query_posts($args);
+
+                                while ( have_posts() ) : the_post();
+
+                                    get_template_part( 'template-parts/content', 'member' );
+
+                                    // If comments are open or we have at least one comment, load up the comment template.
+                                    if ( comments_open() || get_comments_number() ) :
+                                        comments_template();
+                                    endif;
+
+                                endwhile; // End of the loop.
+                                ?>
                             </li>
                         </ul>
                     </div>
+                </div>
+            </section>
+
+            <section class="upcoming-videos">
+                <div class="container">
+                    <div class="upcoming-head">
+                        <div class="heading">
+                            <h2 class="head">
+                                <?php echo get_theme_mod('upcoming_header') ?>
+                                <span class="subhead">
+                                <?php echo get_theme_mod('upcoming_span_header') ?>
+                            </span>
+                            </h2>
+                        </div>
+                        <div>
+                            <div class="<?php echo $data ['sectionHeader'] ['class'] ?>">
+                                <h2 class="<?php echo $data ['sectionHeader'] ['headerClass'] ?>">
+                                    <?php echo $data ['headers'] ['headerVideo'] ?>
+                                    <span class="<?php echo $data ['sectionHeader'] ['spanClass'] ?>">
+                <?php echo $data ['headers'] ['spanVideo'] ?>
+                </span>
+                                </h2>
+                            </div>
+                            <div class="buttons custom-navigation-two">
+                                <a class="<?php echo $data ['introControls'] ['controlLeft'] ?>" href="#"><i
+                                            class="<?php echo $data ['introControls'] ['fontArrowLeft'] ?>" aria-hidden="true"></i></a>
+                                <a class="<?php echo $data ['introControls'] ['controlRight'] ?>" href="#"><i
+                                            class="<?php echo $data ['introControls'] ['fontArrowRight'] ?>" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="section-container">
+                        <li class="pull-left-item">
+                            <?php
+                            $args = [
+                                'post_type' => 'concerts',
+                                'posts_per_page' => 1,
+                            ];
+
+                            query_posts($args);
+
+                            while ( have_posts() ) : the_post();
+
+                                get_template_part( 'template-parts/content', 'concerts' );
+
+                                // If comments are open or we have at least one comment, load up the comment template.
+                                if ( comments_open() || get_comments_number() ) :
+                                    comments_template();
+                                endif;
+
+                            endwhile; // End of the loop.
+
+                            ?>
+                        </li>
+                        <li class="pull-right-item">
+                            <div class="flexslider3">
+                                <ul class="slides">
+
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
 

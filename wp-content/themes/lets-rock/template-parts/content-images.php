@@ -10,5 +10,5 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <img src="<?php the_field('slider_images'); ?>" class="musician">
+    <?php the_field('slider_images'); ?>
 </article><!-- #post-<?php the_ID(); ?> -->

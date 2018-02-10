@@ -24,3 +24,12 @@ a.social {
 a.social:hover {
     opacity: 0.5;
 }
+
+.flex-control-nav {
+    display: none;
+}
+
+.flex-active-slide {
+    display: flex !important;
+    justify-content: space-between !important;
+}
