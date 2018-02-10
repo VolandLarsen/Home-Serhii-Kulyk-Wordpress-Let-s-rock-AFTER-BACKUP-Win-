@@ -511,4 +511,3 @@ function letsrock_customize_register($wp_customize)
 add_action('customize_register', 'letsrock_customize_register');
 
 // Try to add my jQuery script for slider and popup
-

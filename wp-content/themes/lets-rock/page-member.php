@@ -33,6 +33,8 @@ get_header(); ?>
                     comments_template();
                 endif;
 
+                the_posts_pagination($args);
+
             endwhile; // End of the loop.
             ?>
 

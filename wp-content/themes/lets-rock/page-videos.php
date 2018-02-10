@@ -34,6 +34,9 @@ get_header(); ?>
                 endif;
 
             endwhile; // End of the loop.
+
+            the_posts_pagination($args);
+
             ?>
 
         </main><!-- #main -->
