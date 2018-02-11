@@ -14,7 +14,7 @@
 
         <h3>THIS IS OUR LATEST VIDEOS</h3>
         <!-- This is don't work... Maybe wrong video format ?-->
-        <video class="iframe-video">
+        <video class="iframe-video" controls="controls">
             <source src="<?php echo the_field('video') ?>" type="video/mp4">
         </video>
 
