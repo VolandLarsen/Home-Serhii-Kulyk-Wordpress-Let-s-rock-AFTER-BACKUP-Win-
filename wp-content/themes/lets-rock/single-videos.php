@@ -11,15 +11,15 @@ get_header(); ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
-
+            <!-- This page is not working, i tryed to fix this, but i dont understend where is a bug -->
             <?php
             $args = [
-                'post_type' => 'concerts',
+                'post_type' => 'videos',
             ];
 
             while (have_posts()) : the_post();
 
-                get_template_part('template-parts/content', 'concerts-single');
+                get_template_part('template-parts/content', 'videos-single');
 
                 the_post_navigation();
 

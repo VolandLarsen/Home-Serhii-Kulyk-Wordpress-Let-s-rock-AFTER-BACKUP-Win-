@@ -53,6 +53,9 @@
             <div class="flexslider"> <!-- This element will have relative position -->
                 <ul class="slides">
                     <li>
+                        <!-- This page is not working, i try to fix this, but i dont understend where is a bug
+                         Images and posts from other template parts are work with this code, but template part image is not
+                         working-->
                         <?php
                         while (have_posts()) : the_post();
 

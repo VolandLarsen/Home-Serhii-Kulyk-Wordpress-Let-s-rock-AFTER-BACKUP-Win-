@@ -34,6 +34,7 @@ get_header(); ?>
                     <div class="flexslider2">
                         <ul class="slides">
                             <li>
+                                <div class="item-container">
                                 <?php
                                 $args = [
                                     'post_type' => 'member',
@@ -53,8 +54,10 @@ get_header(); ?>
 
                                 endwhile; // End of the loop.
                                 ?>
+                                </div>
                             </li>
                             <li>
+                                <div class="item-container">
                                 <?php
                                 $args = [
                                     'post_type' => 'member',
@@ -74,6 +77,7 @@ get_header(); ?>
 
                                 endwhile; // End of the loop.
                                 ?>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -132,7 +136,42 @@ get_header(); ?>
                         <li class="pull-right-item">
                             <div class="flexslider3">
                                 <ul class="slides">
+                                    <li>
+                                        <?php
 
+                                        $args = [
+                                            'post_type' => 'videos',
+                                            'posts_per_page' => 1,
+                                        ];
+
+                                        query_posts($args);
+
+                                        while ( have_posts() ) : the_post();
+
+                                            get_template_part( 'template-parts/content', 'videos' );
+
+                                        endwhile; // End of the loop.
+
+                                        ?>
+                                    </li>
+                                    <li>
+                                        <?php
+
+                                        $args = [
+                                            'post_type' => 'videos',
+                                            'posts_per_page' => 1,
+                                        ];
+
+                                        query_posts($args);
+
+                                        while ( have_posts() ) : the_post();
+
+                                            get_template_part( 'template-parts/content', 'videos' );
+
+                                        endwhile; // End of the loop.
+
+                                        ?>
+                                    </li>
                                 </ul>
                             </div>
                         </li>

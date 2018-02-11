@@ -22,7 +22,7 @@ get_header(); ?>
             $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
             $args = [
-                'post_type' => 'member',
+                'post_type' => 'videos',
                 'show_all' => false, // показаны все страницы участвующие в пагинации
                 'end_size' => 1,     // количество страниц на концах
                 'mid_size' => 1,     // количество страниц вокруг текущей
@@ -33,14 +33,14 @@ get_header(); ?>
                 'add_fragment' => '',     // Текст который добавиться ко всем ссылкам.
                 'screen_reader_text' => __('Posts navigation'),
                 'posts_per_page' => 10,
-
+                'paged' => $paged
             ];
 
             query_posts($args);
 
             while ( have_posts() ) : the_post();
 
-                get_template_part( 'template-parts/content', 'member' );
+                get_template_part( 'template-parts/content', 'videos' );
 
                 // If comments are open or we have at least one comment, load up the comment template.
                 if ( comments_open() || get_comments_number() ) :
@@ -50,6 +50,7 @@ get_header(); ?>
             endwhile; // End of the loop.
 
             the_posts_pagination($args);
+
             ?>
 
         </main><!-- #main -->

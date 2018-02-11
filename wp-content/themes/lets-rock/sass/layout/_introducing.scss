@@ -29,7 +29,7 @@ a.social:hover {
     display: none;
 }
 
-.flex-active-slide {
-    display: flex !important;
-    justify-content: space-between !important;
+.item-container {
+    display: flex;
+    justify-content: space-between;
 }
