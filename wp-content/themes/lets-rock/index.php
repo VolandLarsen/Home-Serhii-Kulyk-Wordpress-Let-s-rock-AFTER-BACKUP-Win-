@@ -15,7 +15,171 @@
 get_header(); ?>
 <?php get_theme_mod('drop-page') ?>
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main"
+		<main id="main" class="site-main">
+
+            <section class="introducing">
+                <div class="container">
+                    <div class="heading">
+                        <h2 class="head">
+                            <?php echo get_theme_mod('introducing_header') ?>
+                            <span class="subhead">
+                                <?php echo get_theme_mod('introducing_span_header') ?>
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="buttons custom-navigation">
+                        <a class="button flex-prev" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                        <a class="button flex-next" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="flexslider2">
+                        <ul class="slides">
+                            <li>
+                                <div class="item-container">
+                                <?php
+                                $args = [
+                                    'post_type' => 'member',
+                                    'posts_per_page' => 3,
+                                ];
+
+                                query_posts($args);
+
+                                while ( have_posts() ) : the_post();
+
+                                    get_template_part( 'template-parts/content', 'member' );
+
+                                    // If comments are open or we have at least one comment, load up the comment template.
+                                    if ( comments_open() || get_comments_number() ) :
+                                        comments_template();
+                                    endif;
+
+                                endwhile; // End of the loop.
+                                ?>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                <?php
+                                $args = [
+                                    'post_type' => 'member',
+                                    'posts_per_page' => 3,
+                                ];
+
+                                query_posts($args);
+
+                                while ( have_posts() ) : the_post();
+
+                                    get_template_part( 'template-parts/content', 'member' );
+
+                                    // If comments are open or we have at least one comment, load up the comment template.
+                                    if ( comments_open() || get_comments_number() ) :
+                                        comments_template();
+                                    endif;
+
+                                endwhile; // End of the loop.
+                                ?>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="upcoming-videos">
+                <div class="container">
+                    <div class="upcoming-head">
+                        <div class="heading">
+                            <h2 class="head">
+                                <?php echo get_theme_mod('upcoming_header') ?>
+                                <span class="subhead">
+                                <?php echo get_theme_mod('upcoming_span_header') ?>
+                            </span>
+                            </h2>
+                        </div>
+                        <div>
+                            <div class="heading">
+                                <h2 class="head">
+                                    <?php echo get_theme_mod('videos_header') ?>
+                                    <span class="subhead">
+                                <?php echo get_theme_mod('videos_span_header') ?>
+                            </span>
+                                </h2>
+                            </div>
+                            <div class="buttons custom-navigation-two">
+                                <a class="button flex-prev" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                <a class="button flex-next" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="section-container">
+                        <li class="pull-left-item">
+                            <?php
+                            $args = [
+                                'post_type' => 'concerts',
+                                'posts_per_page' => 1,
+                            ];
+
+                            query_posts($args);
+
+                            while ( have_posts() ) : the_post();
+
+                                get_template_part( 'template-parts/content', 'concerts' );
+
+                                // If comments are open or we have at least one comment, load up the comment template.
+                                if ( comments_open() || get_comments_number() ) :
+                                    comments_template();
+                                endif;
+
+                            endwhile; // End of the loop.
+
+                            ?>
+                        </li>
+                        <li class="pull-right-item">
+                            <div class="flexslider3">
+                                <ul class="slides">
+                                    <li>
+                                        <?php
+
+                                        $args = [
+                                            'post_type' => 'videos',
+                                            'posts_per_page' => 1,
+                                        ];
+
+                                        query_posts($args);
+
+                                        while ( have_posts() ) : the_post();
+
+                                            get_template_part( 'template-parts/content', 'videos' );
+
+                                        endwhile; // End of the loop.
+
+                                        ?>
+                                    </li>
+                                    <li>
+                                        <?php
+
+                                        $args = [
+                                            'post_type' => 'videos',
+                                            'posts_per_page' => 1,
+                                        ];
+
+                                        query_posts($args);
+
+                                        while ( have_posts() ) : the_post();
+
+                                            get_template_part( 'template-parts/content', 'videos' );
+
+                                        endwhile; // End of the loop.
+
+                                        ?>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+
             <div class="founders">
                 <div class="container">
                     <div class="founders-content">

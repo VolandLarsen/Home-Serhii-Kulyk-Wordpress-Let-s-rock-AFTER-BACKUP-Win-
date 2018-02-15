@@ -11,16 +11,17 @@ get_header(); ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
-
+            <!-- This page is not working, i tryed to fix this, but i dont understend where is a bug -->
             <?php
-            while ( have_posts() ) : the_post();
 
-                get_template_part( 'template-parts/content', get_post_type() );
+            while (have_posts()) : the_post();
+
+                get_template_part('template-parts/content', 'members-single');
 
                 the_post_navigation();
 
                 // If comments are open or we have at least one comment, load up the comment template.
-                if ( comments_open() || get_comments_number() ) :
+                if (comments_open() || get_comments_number()) :
                     comments_template();
                 endif;
 

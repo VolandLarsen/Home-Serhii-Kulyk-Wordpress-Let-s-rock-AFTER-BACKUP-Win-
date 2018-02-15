@@ -1,0 +1,35 @@
+.musician {
+    max-width: 315px;
+    height: auto;
+}
+.musician-info-active {
+    background-color: $main-color;
+    color: $secondary-font-color;
+}
+
+.musician-info-active:hover{
+    bottom: 0;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.group {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+a.social {
+    text-decoration: none;
+    color: $secondary-font-color;
+}
+
+a.social:hover {
+    opacity: 0.5;
+}
+
+.flex-control-nav {
+    display: none;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-between;
+}

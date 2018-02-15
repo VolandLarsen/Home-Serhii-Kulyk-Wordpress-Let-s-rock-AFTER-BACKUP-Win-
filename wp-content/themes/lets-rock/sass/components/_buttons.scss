@@ -14,6 +14,8 @@ a.main-button {
 }
 
 a.main-button:hover {
+     text-decoration: none;
+     color: $secondary-font-color;
      transition: 0.5s;
      cursor: pointer;
      opacity: 0.8;
@@ -61,21 +63,23 @@ a.learn-more-button:hover {
      opacity: 0.8;
 }
 
-.button {
+a.button {
      background-color: $main-color;
      color: $secondary-font-color;
      display: inline-block;
      padding: 5px 10px;
-     .fa {
-          margin: 0 auto;
-          padding: 0;
-     }
-     &:hover {
-          opacity: 0.8;
-     }
 }
 
-.main-button-purshcase {
+.button:hover {
+     opacity: 0.8;
+}
+
+.button .fa {
+     margin: 0 auto;
+     padding: 0;
+}
+
+a.main-button-purshcase {
      text-decoration: none;
      font-family: 'Droid Sans', sans-serif;
      font-size: 15px;

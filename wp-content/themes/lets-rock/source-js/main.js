@@ -18,3 +18,29 @@ jQuery(document).ready(function() {
             )
     })
 })
+
+jQuery(window).ready(function() {
+  jQuery('.flexslider').flexslider({
+    animation: "slide",
+    animationLoop: true,
+    controlNav: false,
+    directionNav: false
+  })
+})
+
+jQuery(window).ready(function() {
+  jQuery('.flexslider2').flexslider({
+    animation: "slide",
+    controlsContainer: jQuery(".custom-controls-container"),
+    customDirectionNav: jQuery(".custom-navigation a"),
+    controlNav: false,
+  })
+})
+
+jQuery(window).ready(function() {
+  jQuery('.flexslider3').flexslider({
+    animation: "slide",
+    controlsContainer: jQuery(".custom-controls-container"),
+    customDirectionNav: jQuery(".custom-navigation-two a")
+  })
+})

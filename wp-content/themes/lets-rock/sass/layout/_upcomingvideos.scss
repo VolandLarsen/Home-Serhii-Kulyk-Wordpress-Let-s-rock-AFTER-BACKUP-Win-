@@ -1,0 +1,35 @@
+.upcoming-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.concert-image {
+    height: 260px;
+    width: auto;
+}
+
+.date-number {
+    color: $secondary-font-color;
+    font-size: 45px;
+}
+
+.iframe-video {
+    border: none;
+    width: 100%;
+    height: 260px;
+}
+
+.date-month {
+    color: $secondary-font-color;
+    font-size: 30px;
+}
+
+.concert-img:after {
+    content: ' ';
+    background-color: $main-color;
+    height: 3px;
+    width: 70%;
+    display: block;
+    margin-left: 20px;
+}
+
